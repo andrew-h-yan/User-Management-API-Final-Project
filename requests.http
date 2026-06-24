@@ -1,0 +1,67 @@
+### Welcome (failed)
+GET http://localhost:5013/
+
+
+### Welcome
+GET http://localhost:5013/
+Authorization: Bearer token123
+
+### Get invalid
+GET http://localhost:5013/invalid/
+Authorization: Bearer token123
+
+### Get all users
+GET http://localhost:5013/api/user/all
+Authorization: Bearer token123
+
+### post a new user
+POST http://localhost:5013/api/user/
+Authorization: Bearer t
+Content-Type: application/json
+
+{
+    "id": "304825b2-09c4-401e-9e51-a08d0c4ca78f",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+
+### post a new user
+POST http://localhost:5013/api/user/
+Authorization: Bearer token123
+Content-Type: application/json
+
+{
+    "id": "304825b2-09c4-401e-9e51-a08d0c4ca78f",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+
+### get a user by id
+GET http://localhost:5013/api/user/304825b2-09c4-401e-9e51-a08d0c4ca78f
+Authorization: Bearer token123
+
+
+###
+POST http://localhost:5013/api/user/
+Authorization: Bearer token123
+Content-Type: application/json
+
+{
+    "name": "Jane Smith",
+    "email": "jane.s@example.com"
+
+}
+
+### update a user
+PUT http://localhost:5013/api/user/304825b2-09c4-401e-9e51-a08d0c4ca78f
+Authorization: Bearer token123
+Content-Type: application/json
+
+{
+    "name": "Jonny Doe",
+    "email": "john.doe@example.com"
+}
+
+### delete a user
+DELETE http://localhost:5013/api/user/304825b2-09c4-401e-9e51-a08d0c4ca78f
+Authorization: Bearer token123
